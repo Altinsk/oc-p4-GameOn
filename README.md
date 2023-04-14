@@ -1,5 +1,19 @@
 # Projet GameOn
-1. Forkez ce repo ;
-2. Il est conseillé d'utiliser VisualStudio Code et vous pouvez utiliser Docker, mais ce n'est pas obligatoire ;
-3. Il n'y a aucune dépendance ;
-4. Vous ne devez utiliser que du CSS personnalisé et du JavaScript pur, sans jQuery, Bootstrap ou autre librairie.
+Projet Forké depuis OC pour le projet 4
+
+Les modifications faites: 
+ Fermer la modale #1
+ Le bouton fermeture de modale à modifier pour fermer en click.
+
+ Implémenter entrées du formulaire #2
+ s'assurer qui les entrées ont les bonnes type de données.
+ 	
+ Ajouter validation ou messages d'erreur #3
+ Valider ou pas les entrées si le type de données ont acceptés.
+
+ Ajouter confirmation quand envoi réussi #4
+ Confirmer l'envoi de requête avec succès
+
+ Tests manuels #5
+ Tester toutes les modifications sur différents navigateurs.
+
