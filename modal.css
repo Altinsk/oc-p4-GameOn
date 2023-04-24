@@ -139,6 +139,28 @@ main {
 
 /* Modal form */
 
+.errors {
+  font-size: small;
+}
+
+#message {
+  text-align: center;
+}
+
+.fermer {
+  margin-top: 200px;
+}
+
+.fermeture {
+margin-top: 200px;
+margin-inline: 116.5px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+gap: 280px;
+}
+
 .button {
   background: #fe142f;
   margin-top: 0.5em;
@@ -321,6 +343,7 @@ input[data-error]::after {
 .close:after {
   transform: rotate(-45deg);
 }
+.fermer,
 .btn-submit,
 .btn-signup {
   background: #fe142f;

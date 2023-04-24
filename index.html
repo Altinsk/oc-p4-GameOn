@@ -61,7 +61,7 @@
               name="reserve"
               action="index.html"
               method="get"
-              onsubmit="return validate();"
+              id="form"
             >
               <div
                 class="formData">
@@ -71,7 +71,8 @@
                   type="text"
                   id="first"
                   name="first"
-                /><br>
+                />
+                <span id="first_error" class="errors"> </span><br>
               </div>
               <div
                 class="formData">
@@ -81,7 +82,8 @@
                   type="text"
                   id="last"
                   name="last"
-                /><br>
+                />
+                <span id="last_error" class="errors"> </span><br>
               </div>
               <div
                 class="formData">
@@ -90,7 +92,9 @@
                   class="text-control"
                   id="email"
                   name="email"
-                /><br>
+                  type="email"
+                />
+                <span id="email_error" class="errors"> </span><br>
               </div>
               <div
                 class="formData">
@@ -100,12 +104,14 @@
                   type="date"
                   id="birthdate"
                   name="birthdate"
-                /><br>
+                />
+                <span id="date_error" class="errors"> </span><br>
               </div>
               <div
                 class="formData">
                 <label for="number">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
-                <input class="text-control" id="quantity" name="quantity">
+                <input class="text-control" id="quantity" name="quantity" type="number" >
+                <span id="quantity_error" class="errors"> </span>
               </div>
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
               <div
@@ -175,7 +181,8 @@
                 <label class="checkbox-label" for="location6">
                   <span class="checkbox-icon"></span>
                   Portland</label
-                >
+                ><br>
+                <span id="location_error" class="errors"> </span>
               </div>
 
               <div
@@ -184,13 +191,12 @@
                   class="checkbox-input"
                   type="checkbox"
                   id="checkbox1"
-                  checked
                 />
                 <label class="checkbox2-label" for="checkbox1" required>
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
-                </label>
-                <br>
+                </label><br>
+                <span id="checkbox_error" class="errors"> </span>
                 <input class="checkbox-input" type="checkbox" id="checkbox2" />
                 <label class="checkbox2-label" for="checkbox2">
                   <span class="checkbox-icon"></span>
@@ -203,8 +209,15 @@
                 type="submit"
                 class="button"
                 value="C'est parti"
+                id="store"
               />
             </form>
+            <div class="fermeture" id="fermeture">
+              <span id="message"> </span>
+              <button class="fermer" id="ferma">
+                Fermer
+              </button>
+            </div>
           </div>
         </div>
       </div>
