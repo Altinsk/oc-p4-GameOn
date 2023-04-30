@@ -18,8 +18,7 @@ const whitebg = document.querySelector(".hero-section");
 // launch modal form and position top page
 function launchModal(){
   modalbg.style.display = "block";
-  const body = document.body;
-  body.style.position = 'fixed';
+  window.scrollTo(0, 0);
 }
 
 // launch modal event
@@ -27,17 +26,11 @@ modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
 // close modal event
 modalClose.addEventListener("click", close);
-
 closeBtn.addEventListener("click", close);
 
 // close modal function
 function close(){
   modalbg.style.display = "none";
-  const body = document.body;
-  const scrollY = body.style.top;
-  body.style.position = '';
-  body.style.top = '';
-  window.scrollTo(0, parseInt(scrollY || '0') * -1);
 }
 
 // hide elements when form is not valide
