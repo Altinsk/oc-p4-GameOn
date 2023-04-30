@@ -15,7 +15,7 @@ const formData = document.querySelectorAll(".formData");
 const closeBtn = document.querySelector(".closing");
 const whitebg = document.querySelector(".hero-section");
 
-// launch modal form
+// launch modal form and position top page
 function launchModal(){
   modalbg.style.display = "block";
   const body = document.body;
@@ -92,7 +92,6 @@ form.addEventListener("submit", function(event){
   }
 
   // date of birth validation
-  // date Regex pattern
   let birthDay = document.getElementById("birthdate").value;  
   if(birthDay === "") {
     // alert("Veuillez-enter une date valide 5");
@@ -151,14 +150,3 @@ form.addEventListener("submit", function(event){
     document.getElementById("closingDev").style.display = "none";
   }
 });
-
-// removing body scroll bar when modal is opened
-// if(0===0){
-// document.body.style.position = 'fixed';
-// document.body.style.top = `-${window.scrollY}px`;
-// }else{
-//   const scrollY = document.body.style.top;
-//   document.body.style.position = '';
-//   document.body.style.top = '';
-//   window.scrollTo(0, parseInt(scrollY || '0') * -1);
-// }
