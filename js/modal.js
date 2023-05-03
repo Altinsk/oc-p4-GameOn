@@ -18,6 +18,8 @@ const closeBtn = document.querySelector(".closing");
 function launchModal(){
   modalbg.style.display = "block";
   window.scrollTo(0, 0);
+  document.getElementById("message").innerHTML = "";
+  document.getElementById("closingDev").style.display = "none";
 }
 
 // launch modal event
@@ -30,9 +32,21 @@ closeBtn.addEventListener("click", close);
 // close modal function
 function close(){
   modalbg.style.display = "none";
-  window.location.reload();
+  form.style.display = "block"
+  clearAllInputs();
 }
 
+// clear input elements after form submission
+function clearAllInputs(){
+  document.getElementById("first").value = "";
+  document.getElementById("last").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("birthdate").value = "";
+  document.getElementById("quantity").value = "";
+  document.querySelector("input[type=radio][name=location]:checked").checked = false;
+  document.getElementById('checkbox1').checked = false;
+  document.getElementById('checkbox2').checked = false;
+}
 // hide elements when form is not valide
 closeBtn.style.display = "none";
 document.getElementById("closingDev").style.display = "none";
@@ -134,7 +148,7 @@ form.addEventListener("submit", function(event){
 
   // Validation
   if(errorCounter === 0){
-    form.remove();
+    form.style.display = "none"
     document.getElementById("message").innerHTML = "Merci pour votre inscription";
     closeBtn.style.display = "block";
     document.getElementById("closingDev").style.display = "flex";
@@ -144,3 +158,4 @@ form.addEventListener("submit", function(event){
     document.getElementById("closingDev").style.display = "none";
   }
 });
+
