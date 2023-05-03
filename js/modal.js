@@ -13,7 +13,6 @@ const modalBtn = document.querySelectorAll(".modal-btn");
 const modalClose = document.querySelector(".close");
 const formData = document.querySelectorAll(".formData");
 const closeBtn = document.querySelector(".closing");
-const whitebg = document.querySelector(".hero-section");
 
 // launch modal form and position top page
 function launchModal(){
@@ -31,6 +30,7 @@ closeBtn.addEventListener("click", close);
 // close modal function
 function close(){
   modalbg.style.display = "none";
+  window.location.reload();
 }
 
 // hide elements when form is not valide
@@ -99,7 +99,7 @@ form.addEventListener("submit", function(event){
 
   // number of participation an integer
   let quantity = document.getElementById("quantity").value;
-  if (quantity == "" || isNaN(quantity) || quantity > 99 || quantity < 0){
+  if(quantity == "" || isNaN(quantity) || quantity > 99 || quantity < 0){
     // alert("ce champs est obligatoire il faut mettre une valeur");
     document.getElementById("quantity_error").innerHTML = "ce champs est obligatoire il faut mettre une valeur";
     document.getElementById("quantity_error").style.color = "red";
@@ -138,7 +138,8 @@ form.addEventListener("submit", function(event){
     document.getElementById("message").innerHTML = "Merci pour votre inscription";
     closeBtn.style.display = "block";
     document.getElementById("closingDev").style.display = "flex";
-  }else{
+  }
+  else{
     document.getElementById("message").innerHTML = "";
     document.getElementById("closingDev").style.display = "none";
   }
