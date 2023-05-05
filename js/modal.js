@@ -11,7 +11,6 @@ function editNav() {
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const modalClose = document.querySelector(".close");
-const formData = document.querySelectorAll(".formData");
 const closeBtn = document.querySelector(".closing");
 
 // launch modal form and position top page
@@ -38,14 +37,7 @@ function close(){
 
 // clear input elements after form submission
 function clearAllInputs(){
-  document.getElementById("first").value = "";
-  document.getElementById("last").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("birthdate").value = "";
-  document.getElementById("quantity").value = "";
-  document.querySelector("input[type=radio][name=location]:checked").checked = false;
-  document.getElementById('checkbox1').checked = false;
-  document.getElementById('checkbox2').checked = false;
+  form.reset();
 }
 // hide elements when form is not valide
 closeBtn.style.display = "none";
